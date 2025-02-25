@@ -1,88 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <title>QR Code with Center Image</title>
-  <!-- Bootstrap CSS (CDN) -->
+  <meta charset="UTF-8" />
+  <title>Welcome to SDFD Clubs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Bootstrap 5 CSS (CDN) -->
   <link 
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
-    rel="stylesheet"
+    rel="stylesheet" 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
   >
-  <!-- Your custom CSS -->
-  <link rel="stylesheet" href="style.css">
+
+  <!-- Optionally, your custom CSS (if you have any) -->
+  <!-- <link rel="stylesheet" href="CSS/style.css"> -->
 </head>
 <body>
 
-  <!-- A simple Bootstrap navbar -->
-  <nav class="navbar navbar-dark bg-dark">
+  <!-- BEGIN NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-      <span class="navbar-brand mb-0 h1">QR Code with Logo</span>
+      <!-- Brand or title -->
+      <a class="navbar-brand" href="index.html">
+        SDFD Clubs
+      </a>
+
+      <!-- Hamburger button for mobile -->
+      <button 
+        class="navbar-toggler" 
+        type="button" 
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent" 
+        aria-controls="navbarSupportedContent" 
+        aria-expanded="false" 
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Navbar links -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto">
+          <!-- Home link -->
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">
+              Home
+            </a>
+          </li>
+
+          <!-- About link -->
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">
+              About
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="CQR.html">
+              Custom QR Code Generator
+            </a>
+          </li>
+
+          <!-- Clubs dropdown -->
+          <li class="nav-item dropdown">
+            <a 
+              class="nav-link dropdown-toggle" 
+              href="#" 
+              id="navbarDropdown" 
+              role="button" 
+              data-bs-toggle="dropdown" 
+              aria-expanded="false"
+            >
+              Clubs
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li>
+                <a class="dropdown-item" href="Clubs/Club1.html">
+                  Club 1
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="Clubs/Club2.html">
+                  Club 2
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="Clubs/Club3.html">
+                  Club 3
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="Clubs/Club4.html">
+                  Club 4
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="Clubs/Club5.html">
+                  Club 5
+                </a>
+              </li>
+              <!-- add more clubs if needed -->
+            </ul>
+          </li>
+        </ul>
+      </div>
     </div>
   </nav>
+  <!-- END NAVBAR -->
 
-  <div class="container my-5">
+  <!-- MAIN CONTENT SECTION -->
+  <div class="container mt-5">
+    <!-- Optional Hero Section -->
+    <div class="p-5 mb-4 bg-light rounded-3 shadow-sm">
+      <div class="container py-4">
+        <h1 class="display-5 fw-bold">Welcome to SDFD Clubs!</h1>
+        <p class="col-md-8 fs-4">
+          Discover our community-driven clubs, events, and activities. 
+          Scroll down to learn more, or use the navigation above!
+        </p>
+        <button class="btn btn-primary btn-lg" type="button">
+          Learn More
+        </button>
+      </div>
+    </div>
 
+    <!-- Example Content Rows -->
     <div class="row">
-      <div class="col-lg-6 offset-lg-3">
-
-        <!-- Card for user inputs -->
-        <div class="card shadow">
-          <div class="card-body">
-            <h5 class="card-title">Generate Your QR Code</h5>
-            
-            <!-- QR Input -->
-            <div class="mb-3">
-              <label for="qrInput" class="form-label">Text / URL:</label>
-              <input 
-                type="text" 
-                id="qrInput" 
-                class="form-control" 
-                placeholder="Enter text or URL"
-                value="https://example.com"
-              >
-            </div>
-
-            <!-- Logo Input -->
-            <div class="mb-3">
-              <label for="logoInput" class="form-label">Optional Logo Image:</label>
-              <input 
-                type="file" 
-                id="logoInput" 
-                class="form-control"
-                accept="image/*"
-              >
-            </div>
-
-            <!-- Generate & Download buttons -->
-            <button id="btnGenerate" class="btn btn-primary">Generate QR</button>
-            <button id="btnDownload" class="btn btn-success ms-2" disabled>Download</button>
-          </div>
-        </div>
-
-        <!-- Final result card -->
-        <div class="card mt-4 shadow">
-          <div class="card-body text-center">
-            <h5 class="card-title">Resulting QR Code</h5>
-            <img 
-              id="finalQR" 
-              alt="QR code will appear here" 
-              class="img-fluid border p-2 bg-white"
-              style="max-width: 300px;"
-            />
-          </div>
-        </div>
-        
+      <div class="col-md-6 mb-4">
+        <h2>Our Mission</h2>
+        <p>
+          At SDFD Clubs, we strive to foster a sense of belonging 
+          and personal growth through engaging club activities. 
+          Our members come from diverse backgrounds, united by 
+          their passion to learn, share, and connect.
+        </p>
+      </div>
+      <div class="col-md-6 mb-4">
+        <!-- Optional image or placeholder -->
+        <img 
+          src="https://via.placeholder.com/500x300" 
+          class="img-fluid rounded" 
+          alt="Placeholder"
+        >
       </div>
     </div>
   </div>
 
-  <!-- QRCode.js library (from CDN) -->
-  <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
-  <!-- Bootstrap JS (optional, if you want JavaScript components) -->
+  <!-- FOOTER (Optional) -->
+  <footer class="bg-dark text-white mt-5">
+    <div class="container p-3">
+      <p class="m-0 text-center">
+        &copy; 2025 SDFD Clubs. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JS (includes Popper) -->
   <script 
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-  ></script>
-  <!-- Your custom JS -->
-  <script src="script.js"></script>
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
+  </script>
+
+  <!-- Optional: your custom JS -->
+  <!-- <script src="JS/script.js"></script> -->
+
 </body>
 </html>
