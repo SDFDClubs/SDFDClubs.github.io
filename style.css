@@ -1,0 +1,10 @@
+/* Some simple additional styling */
+body {
+    background: #f8f9fa; /* Light gray background (Bootstrap's default) */
+  }
+  
+  #finalQR {
+    /* We already set max-width in the HTML inline style.
+       Additional styling can go here if desired. */
+  }
+  
